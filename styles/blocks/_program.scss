@@ -1,0 +1,97 @@
+.program {
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 40px;
+
+        @include tablet {
+            row-gap: 20px;
+        }
+        
+    }
+    
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 120px;
+        padding-block: 164px;
+
+        @include desktop {
+            align-items: center;
+            padding-block: 50px;
+            column-gap: 60px;
+            justify-content: center;
+        }
+
+        @include tablet {
+            column-gap: 25px;
+        }
+
+        @include mobile {
+            flex-direction: column-reverse;
+            row-gap: 40px;
+        }
+    }
+
+    &__video-wrapper {
+        position: relative;
+        margin-top: -64px;
+
+        @include desktop {
+            margin-top: 0;
+        }
+
+    }
+
+    &__video {
+        border-radius: 24px;
+
+        &--hide {
+            @include desktop {
+                display: none;
+            }
+        }
+
+        &--foreground {
+            position: absolute;
+            top: 126px;
+            left: 130px;
+
+            @include desktop {
+                position: static;
+            }
+        }
+    }
+
+    &__button {
+        @include reset-button;
+        @include square(50px);
+
+        border-radius: 50%;
+        border: none;
+        position: absolute;
+        z-index: 1;
+        background-color: var(--color-light);
+        opacity: 0.6;
+        top: 297px;
+        left: 284px;
+        cursor: pointer;
+
+        @include hover {
+            opacity: 1;
+        }
+
+        @include desktop {
+            top: 175px;
+            left: 150px;
+        }
+
+        svg {
+            position: absolute;
+            top: 17px;
+            left: 19px;
+        }
+    }
+}

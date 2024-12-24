@@ -1,0 +1,82 @@
+.field {
+    display: flex;
+    flex-direction: column-reverse;
+
+    @include tablet {
+        // display: none;
+    }
+
+    &__label {
+        padding-top: 8px;
+        padding-left: 8px;
+
+        @include tablet {
+            padding-top: 0;
+        }
+    }
+
+    &__data,
+    &__select {
+        position: relative;
+
+        @include hover {
+            opacity: 0.5;
+        }
+    }
+
+    &__data::after {
+        content: url("./../../RoomTibet/images/icons/calendar.svg");
+        position: absolute;
+        padding: 0;
+        top: 15px;
+        left: 237px;
+        pointer-events: none;
+    }
+
+    @include hover {
+        &::after {
+            opacity: 0.5;
+        }
+    }
+
+    &__select::after {
+        content: url("./../../RoomTibet/images/icons/arrow-down.svg");
+        position: absolute;
+        padding: 0;
+        top: 15px;
+        left: 237px;
+        pointer-events: none;
+    }
+
+    @include hover {
+        &::after {
+            opacity: 0.5;
+        }
+    }
+
+    &__input::-webkit-inner-spin-button,
+    &__input::-webkit-calendar-picker-indicator {
+        display: none;
+        -webkit-appearance: none;
+    }
+
+    &__control {
+        height: var(--input-button-height);
+        background: inherit;
+        min-width: 270px;
+        color: var(--color-light);
+        border: var(--border-input);
+        border-radius: var(--border-radius-input);
+        padding-left: 16px;
+        outline: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+    
+
+        option {
+            color: var(--color-dark);
+        }
+    }
+}

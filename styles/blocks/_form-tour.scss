@@ -1,0 +1,21 @@
+.form-tour {
+    &__button {
+        background-color: var(--color-light);
+        color: var(--color-accent-alternate);
+
+        @include desktop {
+            grid-column: 1 / -1;
+        }
+
+        @include tablet {
+            grid-column: auto;
+        }
+
+    @include hover {
+        color: var(--color-light);
+        background-color: var(--color-accent-alternate);
+    }
+
+    }
+    
+}

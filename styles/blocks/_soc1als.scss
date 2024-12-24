@@ -1,0 +1,22 @@
+.soc1als {
+
+    padding-top: 32px;
+
+    @include mobile {
+        padding-top: 32px;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+        color: var(--color-light-alternate);
+
+        svg {
+
+            @include hover {
+                color: var(--color-accent);
+            }
+        }
+    }
+}

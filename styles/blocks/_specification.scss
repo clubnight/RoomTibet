@@ -1,0 +1,27 @@
+.specification {
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 40px;
+
+        @include mobile {
+            row-gap: 32px;
+        }
+    }
+
+    &__item {
+        display: flex;
+        column-gap: 16px;
+        align-items: center;
+        justify-content: start;
+
+        @include mobile {
+            align-items: start;
+        }
+    }
+
+    &__description {
+        font-size: 14px;
+    }
+}

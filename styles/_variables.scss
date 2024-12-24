@@ -1,0 +1,31 @@
+:root {
+    --color-light: #FDFDFD;
+    --color-light-alternate: #FFFFFF;
+    --color-border-input: #E1E3E4;
+    --color-dark: #18121E;
+    --color-background: #F5F5F5;
+    --color-dark-alternate: #000000;
+    --color-accent: #F2BE22;
+    --color-accent-alternate: #1A3E3E;
+    --color-background-alternate: #F3F5F4;
+
+    --font-family-base: 'NunitoSans', sans-serif;
+    --font-family-alternate: 'NEXTART', sans-serif;
+
+    --shadow: 0 0 15px 0 var(--color-dark);
+
+    --border-radius-button: 4px;
+    --border-radius-input: 8px;
+
+    --border-input: 1px solid var(--color-border-input);
+
+    --input-button-height: 52px;
+    --button-height-alternate: 44px;
+
+    --transition-duration: 0.4s;
+
+    --container-width: 1180px;
+    --container-padding-x: 16px;
+
+    --section-padding-y: 50px;
+}

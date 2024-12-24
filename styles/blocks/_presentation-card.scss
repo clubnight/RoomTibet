@@ -1,0 +1,76 @@
+.presentation-card {
+    width: 380px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include mobile {
+        width: 285px;
+        height: 400px;
+    }
+
+    &__rating {
+        align-self: end;
+        display: flex;
+        align-items: center;
+        column-gap: 4px;
+        justify-content: space-around;
+        margin-top: 50px;
+        padding: 4px 8px;
+        font-size: 14px;
+        font-weight: 700;
+        background-color: rgb(253, 253, 253, 0.4);
+        border-radius: 4px 0 0 4px;
+
+        svg {
+            color: var(--color-accent);
+        }
+
+        @include mobile {
+            column-gap: 6px;
+            padding-inline: 10px;
+            margin-top: 40px;
+        }
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 32px 23px;
+        color: var(--color-light);
+        background-color: rgb(255, 255, 255, 0.2);
+
+        @include mobile {
+            padding-inline: 24px;
+        }
+
+    }
+
+    &__name {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__title {
+        @include fluid-text(24, 18)
+    }
+
+    &__description {
+        font-size: 14px;
+    }
+
+    &__price {
+        padding: 8px 16px;
+        font-weight: 700;
+        background-color: rgb(255, 255, 255, 0.3);
+        border-radius: 4px;
+
+        @include fluid-text (20, 16);
+
+        @include mobile {
+            padding: 3px 13px;
+        }
+    }
+}

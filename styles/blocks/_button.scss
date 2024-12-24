@@ -1,0 +1,40 @@
+.button {
+    @include reset-button;
+
+    padding-inline: 36px;
+    height: var(--input-button-height);
+    border-radius: var(--border-radius-button);
+    border: none;
+    background-color: var(--color-accent-alternate);
+    color: var(--color-light);
+    font-size: 16px;
+    line-height: 1.25;
+    font-weight: 700;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+
+    @include mobile {
+        height: var(--button-height-alternate);
+    }
+    
+    @include hover {
+        background-color: var(--color-accent);
+        color: var(--color-accent-alternate);
+    }
+
+    &--header {
+        height: var(--button-height-alternate);
+        padding-inline: 24px;
+
+        @include hover {
+            background-color: var(--color-light);
+            color: var(--color-accent-alternate);
+        }
+    }
+    
+    &--footer {
+        height: var(--button-height-alternate);
+        padding-inline: 24px;
+    }
+}

@@ -1,0 +1,82 @@
+.booking {
+    background-image: url('./../images/booking.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: -88px;
+
+    @include tablet {
+        height: 600px;
+    }
+
+    &__content {
+        padding-block: 551px 82px;
+
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            padding-top: 300px;
+            align-items: center;
+        }
+
+        @include mobile {
+            align-items: start;
+        }
+
+        @include mobile {
+            padding-inline: 0;
+            padding-top: 298px;
+        }
+    }
+
+    &__title {
+        font-family: var(--font-family-alternate);
+        text-transform: uppercase;
+        color: var(--color-light);
+        padding-bottom: 41px;
+
+        @include desktop {
+            padding-inline: 16px;
+        }
+
+        @include tablet {
+            padding-bottom: 10px;
+        }
+    }
+
+    &__form {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        height: 161px;
+        column-gap: 24px;
+        padding-top: 40px;
+        border-radius: 10px;
+        background: rgba($color: #ffffff, $alpha: 0.2);
+        color: var(--color-light);
+
+        @include desktop {
+            display: grid;
+            grid-template-columns: repeat(3, 270px);
+            grid-template-rows: 1fr;
+            padding-top: 16px;
+            margin-inline: 16px;
+            padding-bottom: 16px;
+            column-gap: 15px;
+        }
+
+        @include tablet {
+            grid-template-columns: repeat(2, 270px);
+            grid-template-rows: repeat(2, 1fr);
+            height: 175px;
+            width: 600px;
+
+            @include mobile {
+                display: block;
+                background-color: transparent;
+                width: auto;
+                height: auto;
+            }
+        }
+    }
+}

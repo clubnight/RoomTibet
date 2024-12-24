@@ -1,0 +1,87 @@
+.services {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    &__title {
+        color: var(--color-background-alternate);
+        margin-left: -14px;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+        color: var(--color-light);
+        font-size: 14px;
+    }
+
+    &__item--new {
+        position: relative;
+
+        &::before {
+            content: 'new';
+            position: absolute;
+            width: 44px;
+            height: 20px;
+            border-radius: 4px;
+            background-color: var(--color-light);
+            color: var(--color-dark);
+            left: 220px;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        @include hover {
+            &::before {
+                background-color: var(--color-accent);
+            }
+        }
+
+    }
+
+    &__link {
+        position: relative;
+
+        &::before {
+            @include square(7px);
+
+            position: absolute;
+            content: '';
+            border: 2px solid var(--color-light-alternate);
+            rotate: -45deg;
+            top: 30%;
+            left: -15px;
+            clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+        }
+
+        @include hover {
+            &::before {
+                border: 2px solid var(--color-accent);
+            }
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: 0;
+            display: block;
+            width: 0;
+            height: 1px;
+            background: var(--color-accent);
+            transition-duration: var(--transition-duration);
+        }
+
+        @include hover {
+            &::after {
+                width: 100%;
+            }
+        }
+
+        @include hover {
+            color: var(--color-accent);
+        }
+    }
+}

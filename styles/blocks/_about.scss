@@ -1,0 +1,34 @@
+.about {
+    max-width: 580px;
+
+    @include mobile {
+        row-gap: 20px;
+    }
+
+    &__subtitle {
+        color: var(--color-accent);
+        line-height: 0.83;
+        padding-bottom: 8px;
+
+        &--small {
+            @include fluid-text(18, 16)
+        }
+
+        @include fluid-text(24, 16)
+    }
+
+    &__title {
+
+        &--small {
+            @include fluid-text(26, 24)
+        }
+    }
+
+    &__button {
+        align-self: start;
+
+        @include mobile {
+            align-self: center;
+        }
+    }
+}

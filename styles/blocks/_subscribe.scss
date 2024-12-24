@@ -1,0 +1,137 @@
+.subscribe {
+    margin-bottom: -98px;
+    position: relative;
+    z-index: 1;
+
+    @include tablet {
+        margin-bottom: 0;
+    }
+
+    @include mobile {
+        margin-bottom: 50px;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--color-light);
+        box-shadow: 0 0 15px 0 rgba(24, 18, 30, 0.12);
+        border-radius: 6px;
+        column-gap: 64px;
+        padding: 40px 100px;
+        align-items: center;
+
+        @include desktop {
+            padding-inline: 20px;
+        }
+
+        @include tablet {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @include mobile {
+            padding: 24px;
+            align-items: start;
+        }
+    }
+
+    &__name {
+        
+        @include tablet {
+            text-align: center;
+        }
+
+        @include mobile {
+            text-align: start;
+            padding-bottom: 18px;
+        }
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+
+        @include mobile {
+            row-gap: 24px;
+        }
+    }
+
+    &__block {
+        display: flex;
+        column-gap: 16px;
+        align-items: end;
+
+        @include tablet {
+            justify-content: center;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            align-items: start;
+            row-gap: 16px;
+        }
+    }
+
+    @include tablet {
+        justify-content: center;
+    }
+
+    &__field {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__label {
+        font-size: 16px;
+        font-weight: 600;
+        padding-bottom: 8px;
+    }
+
+    &__input {
+        font-size: 14px;
+        font-weight: 300;
+        width: 280px;
+        padding-left: var(--container-padding-x);
+        height: var(--button-height-alternate);
+        border: none;
+        border-radius: var(--border-radius-button);
+        background-color: var(--color-background-alternate);
+
+        @include hover {
+            border: 1px solid var(--color-accent-alternate);
+        }
+
+        &:focus::-webkit-input-placeholder {
+            color: transparent;
+        }
+
+        &:focus::-moz-placeholder {
+            color: transparent;
+        }
+
+        &:focus::-ms-input-placeholder {
+            color: transparent;
+        }
+    }
+
+    &__description {
+        font-size: 14px;
+        font-weight: 600;
+        padding-top: 8px;
+
+        @include tablet {
+            text-align: center;
+        }
+
+        @include mobile {
+            text-align: start;
+            padding-top: 0;
+        }
+    }
+
+    &__rights {
+        text-decoration: underline;
+    }
+}

@@ -1,0 +1,130 @@
+.footer {
+
+    &__inner {
+        background-color: var(--color-accent-alternate);
+    }
+
+    &__body {
+        display: flex;
+        padding-block: 178px 80px;
+        justify-content: space-between;
+
+        @include tablet {
+            padding-block: 60px 30px;
+            column-gap: 35px;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            padding-block: 50px 80px;
+            row-gap: 50px;
+        }
+    }
+
+    &__navigation {
+        display: flex;
+        flex-direction: column;
+        width: 480px;
+
+        @include desktop {
+            width: 340px;
+        }
+
+        @include tablet {
+            max-width: 320px;
+        }
+    }
+
+    &__title {
+        color: var(--color-background-alternate);
+    }
+
+    &__description {
+        color: var(--color-light-alternate);
+        font-size: 14px;
+        padding-top: 17px;
+        padding-right: 44px;
+    }
+
+    &__contacts {
+        display: flex;
+        column-gap: 24px;
+        padding-top: 80px;
+        color: var(--color-light-alternate);
+        font-size: 14px;
+        font-style: normal;
+
+        @include tablet {
+            flex-direction: column;
+        }
+
+        @include mobile {
+            padding-top: 30px;
+        }
+    }
+
+    &__contacts-link {
+        text-decoration: underline;
+
+        @include hover {
+            color: var(--color-accent);
+            text-decoration: none;
+        }
+    }
+
+    &__menu {
+
+        @include desktop {
+            padding-right: 44px;
+        }
+
+        @include tablet {
+            width: 355px;
+            padding-right: 0;
+        }
+
+        @include mobile {
+            padding-inline: 16px;
+        }
+    }
+
+    &__info {
+        margin-left: auto;
+
+        @include desktop {
+            margin-left: 60px;
+        }
+
+        @include mobile {
+            margin-left: 0;
+            padding-inline: 16px;
+        }
+    }
+
+    &__extra {
+        background-color: var(--color-dark);
+        color: var(--color-light-alternate);
+    }
+
+    &__extra-body {
+        display: flex;
+        justify-content: space-between;
+        padding-block: 24px;
+        color: var(--color-light-alternate);
+
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+            padding-block: 20px;
+        }
+    }
+
+    &__privacy-policy-link {
+
+        text-decoration: underline;
+
+        @include hover {
+            color: var(--color-accent);
+        }
+    }
+}
